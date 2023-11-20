@@ -145,10 +145,11 @@ export default class ServiceCubos {
             var url = Global.urlApi + request;
             //var compra = {};
             var headers = {
-                'Authorization': `Bearer ${Global.token}`
+                'Authorization': `Bearer ${Global.token}`,
+                'Content-Type': 'application/json'
             };
 
-            axios.post(url, {headers}).then(response => {
+            axios.post(url, null, {headers}).then(response => {
                 resolve(response);
             })
             //apereiramolinero@gmail.comm
